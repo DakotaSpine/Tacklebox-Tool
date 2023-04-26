@@ -8,6 +8,15 @@ let biomesList = [
     'biome-river',
     'biome-reef'
 ];
+let heaviestFishText = {
+    "": "Not recorded yet",
+    "biome-docks": "Docks",
+    "biome-cliffs": "Cliffs",
+    "biome-lake": "Lake",
+    "biome-beach": "Beach",
+    "biome-river": "River",
+    "biome-reef": "Reef"
+};
 
 function toggleself(el) {
     if (el.classList.contains(currentBiome)) {
@@ -35,8 +44,12 @@ function changeSelectedBiome(el) {
     currentBiome = el.value;
 }
 
-function clearSelection() {
-    let res = confirm("Clear the selection? This cannot be undone.");
+function recordHeaviestFish() {
+    document.querySelector('#heaviestFish').innerText = heaviestFishText[currentBiome];
+}
+
+function resetPage() {
+    let res = confirm("Reset the page? This cannot be undone.");
     if (res) {
         const els = document.querySelectorAll('a.link');
         for (let el of els) {
@@ -47,4 +60,5 @@ function clearSelection() {
     }
     currentBiome = "biome-docks";
     document.querySelectorAll('input[type="radio"][name="biome"]')[0].checked = true;
+    document.querySelector('#heaviestFish').innerText = heaviestFishText[''];
 }
