@@ -17,44 +17,54 @@
                 </button>
             </div>
         </div>
-        <div id="biomeSelector">
-            Select the biome:
-            <div id="options">
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-docks" checked="checked" onclick="changeSelectedBiome(this);" /> Docks
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-cliffs" onclick="changeSelectedBiome(this);" /> Cliffs
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-lake" onclick="changeSelectedBiome(this);" /> Lake
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-beach" onclick="changeSelectedBiome(this);" /> Beach
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-river" onclick="changeSelectedBiome(this);" /> River
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="biome" value="biome-reef" onclick="changeSelectedBiome(this);" /> Reef
-                    </label>
+        <div id="sidebar">
+            <div id="biomeSelector">
+                Select the biome:
+                <div id="biomeOptions">
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-docks" checked="checked" onclick="changeSelectedBiome(this);" /> <span class="dot biome-docks"></span> Docks
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-cliffs" onclick="changeSelectedBiome(this);" /> <span class="dot biome-cliffs"></span> Cliffs
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-lake" onclick="changeSelectedBiome(this);" /> <span class="dot biome-lake"></span> Lake
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-beach" onclick="changeSelectedBiome(this);" /> <span class="dot biome-beach"></span> Beach
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-river" onclick="changeSelectedBiome(this);" /> <span class="dot biome-river"></span> River
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="biome" value="biome-reef" onclick="changeSelectedBiome(this);" /> <span class="dot biome-reef"></span> Reef
+                        </label>
+                    </div>
                 </div>
             </div>
-            <br />
+            <div id="heaviestFishRecorder">
+                <div>Heaviest Fish:</div>
+                <div id="heaviestFish">Not recorded yet</div>
+                <div>
+                    <button type="button" class="btn" onclick="recordHeaviestFish();">
+                        Record New
+                    </button>
+                </div>
+            </div>
             <div>
-                <button type="button" class="test" onclick="clearSelection();">
-                    Clear selection
+                <button type="button" class="btn" onclick="resetPage();">
+                    Reset
                 </button>
             </div>
         </div>

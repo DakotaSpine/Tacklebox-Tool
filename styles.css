@@ -7,10 +7,18 @@
     display: none;
 }
 
-#top, #biomeSelector, #debug {
+#top, #sidebar, #debug {
     font-family: minecraft;
     font-size: 16pt;
     color: #444;
+}
+
+#biomeSelector {
+    margin-bottom: 20px;
+}
+
+#heaviestFishRecorder {
+    margin-bottom: 90px;
 }
 
 button.mc-button {
@@ -67,7 +75,11 @@ button.mc-button:active .after {
     background-image: url(images/button-pressed-right.png);
 }
 
-button.test {
+button.btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 190px;
+    text-align: center;
     font-family: minecraft;
     font-size: 16pt;
     color: #444;
@@ -82,14 +94,14 @@ button.test {
     padding-left: 10px;
     padding-right: 10px;
 }
-button.test.active {
+button.btn.active {
     border-top-color: #666;
     border-left-color: #666;
     border-bottom-color: white;
     border-right-color: white;
 }
 
-#biomeSelector {
+#sidebar {
     display: inline-block;
     vertical-align: top;
     padding-top: 25px;
@@ -129,6 +141,37 @@ button.test.active {
     width: 64px;
     height: 64px;
     margin-right: 4px;
+}
+
+.dot {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 7px;
+}
+.dot.biome-docks {
+    border-color: 1px solid rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0);
+}
+.dot.biome-cliffs {
+    border-color: 1px solid rgb(255, 255, 0);
+    background-color: rgb(255, 255, 0);
+}
+.dot.biome-lake {
+    border-color: 1px solid rgb(255, 0, 255);
+    background-color: rgb(255, 0, 255);
+}
+.dot.biome-beach {
+    border-color: 1px solid rgb(0, 255, 255);
+    background-color: rgb(0, 255, 255);
+}
+.dot.biome-river {
+    border-color: 1px solid rgb(128, 128, 255);
+    background-color: rgb(128, 128, 255);
+}
+.dot.biome-reef {
+    border-color: 1px solid rgb(0, 255, 128);
+    background-color: rgb(0, 255, 128);
 }
 
 .link.visible {
