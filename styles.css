@@ -3,6 +3,10 @@
     src: url(fonts/MinecraftRegular-Bmg3.otf);
 }
 
+.hide {
+    display: none;
+}
+
 #top, #biomeSelector, #debug {
     font-family: minecraft;
     font-size: 16pt;
